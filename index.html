@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <title>StatBuff Start Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            background-color: #FFFBF5;
+            margin-bottom: 20px;
+        }
+
+.custom-shape-divider-bottom-1707100965 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1707100965 svg {
+    position: relative;
+    display: block;
+    width: calc(191% + 1.3px);
+    height: 253px;
+}
+
+.custom-shape-divider-bottom-1707100965 .shape-fill {
+    fill: #FFFBF5;
+}
+
+
+
+.wave-header {
+    position: relative;
+    background-color: #8FA1ED;
+    min-height: 80vh;
+    width: 100%;
+    /* background-image: url("plus minus bg 2.png"); */
+}
+
+.wave-header svg {
+            width: 100%;
+            height: 100%;
+        }
+
+    #logo {
+        width: 40%;
+        height: 40%;
+    }
+
+    /* WRITING ELEMENTS: */
+
+    h1 {
+            color: white;
+            font-family: 'Lilita One', sans-serif;
+            max-width: 800px;
+            font-weight: 100;
+            font-size: 45px; 
+            margin-left: 130px;
+            margin-top: 0;
+            margin-bottom: 0;
+            /* margin-top: 30px; */
+        }
+
+    #logo {
+        width: 45%;
+        height: auto;
+        margin-left: 130px;
+    }
+
+    button {
+            background-color: #4B5EAB; 
+            color: white;
+            font-size: 30px;
+            border: none;
+            padding: 30px 35px;
+            border-radius: 40px;
+            cursor: pointer;
+            margin-left: 130px;
+            margin-top: 50px;
+
+        }
+
+    button:hover {
+        background-color: #384884;
+    }
+
+    /* ENG OF WRITING ELEMENTS */
+
+    #buffy {
+            /* height: 600px; */
+            height: 550px;
+            width: auto;
+            margin-right: 60px;
+            /* top: 120px; */
+            position: relative;
+            z-index: 1;
+    }
+
+    .items {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .circles {
+        width: 350px;
+        height: auto;
+    }
+
+    .icon-text {
+        font-family: 'Lilita One', sans-serif;
+        font-size: 30px;
+        color: #464F72;
+        text-align: center;
+    }
+
+    .icon {
+        display: block;
+        justify-content: center;
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    
+
+
+
+        @media screen and (max-width: 494px) {
+            button {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+            }
+
+            .wave-header {
+                width: 100%;
+            } 
+
+            h1 {
+                text-align: center;
+                /* margin: 0; */
+                margin-left: 10px;
+                margin-right: auto;
+                font-size: 40px;
+            }
+
+            #logo {
+                width: 75%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+            }
+
+            #buffy {
+                width: 300px;
+                height: auto;
+                margin: 0;
+            }
+
+            .items, .icon-container, .writing {
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* IPAD SIZES: */
+        @media screen and (min-width: 900px) and (max-width: 1080px) {
+            #logo {
+                width: 70%;
+                height: auto;
+            }
+            
+            h1 {
+                font-size: 35px;
+            }
+
+            .wave-header {
+                min-height: 80vh;
+            }
+            
+            #buffy {
+                margin-top: 45px;
+                width: 50%;
+                height: 50%;
+            }
+        }
+
+        @media screen and (min-width: 700px) and (max-width: 840px) {
+            #logo {
+                width: 80%;
+                height: auto;
+            }
+
+            .wave-header {
+                min-height: 60vh;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+
+            .circles {
+                width: 90%;
+                height: auto;
+            }
+
+            #buffy {
+                margin-top: 45px;
+                width: 55%;
+                height: 55%;
+            }
+
+            /* .icon-container {
+                display: flex;
+                justify-content: space-evenly;
+            } */
+        }
+
+
+
+    </style>
+</head>
+
+
+<body>
+    <!-- WAVE HEADER:  -->
+    <div class="wave-header">
+        <div class="items">
+            <div class="writing">
+                <br>
+                <br>
+                <img src="statbuff logo transparent.png" id="logo">
+                <h1>A place to buff up your statistics fundamentals.</h1>
+                <button onclick="location.href = 'fundamentals.html'">Get Started</button>
+            </div>
+                <img id="buffy" src="buffy transparent.png">
+        </div>
+
+
+        <div class="custom-shape-divider-bottom-1707100965">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        </div>
+
+    <!-- END OF WAVE HEADER -->
+
+    <!-- ICONS -->
+
+    <div class="icon-container">
+        <div class="icon">
+            <img src="purple books.png" class="circles">
+            <p class="icon-text">Engaging lessons</p>
+        </div>
+
+        <div class="icon">
+            <img src="purple teaching.png" class="circles">
+            <p class="icon-text">Clear explanations</p>
+        </div>
+
+        <div class="icon">
+            <img src="purple laptop.png" class="circles">
+            <p class="icon-text">Interactive simulations</p>
+        </div>
+
+    </div>
+
+        
+        
+
+   
+
+  
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <title>The Mode</title>
+        <style>
+        
+        html, body {
+            /* background-color: #FFFBF5; */
+            margin-left: 65px;
+            margin-right: 65px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            /* BACKGROUND: */
+            background-image: url("plus minus cream 2.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        button[type="continue"] {
+            background-color: #899EF9; 
+            color: white;
+            font-size: 25px;
+            border: none;
+            padding: 25px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+
+        }
+            
+        button[type="continue"]:hover {
+            background-color: #6A82E8;
+        }
+
+        button[type="back"] {
+            background-color: #5F6C9F; 
+            color: white;
+            font-size: 25px;
+            border: none;
+            padding: 25px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button[type="back"]:hover {
+            background-color: #384884;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1 {
+            color: #5F6C9F;
+            text-align: center;
+            font-size: 70px;
+            margin-top: 90px;
+            margin-bottom: 45px;
+            font-family: 'Lilita One', sans-serif;
+            font-weight: 100;
+        }
+
+        p {
+            font-size: 27px;
+            text-align: center;
+            color: #464F72;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        /* NAVIVATORS: */
+
+        .button-navigator {
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            border-radius: 50px;
+        }
+
+        .imgnav {
+            max-width: 100%;
+            max-height: 100%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .navbar {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        button[type="nav bar"] {
+            background-color: #fdc47aa3;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            width: 70px;
+            height: 70px;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: fixed;
+            top: 30px;
+            left: 30px;
+        }
+
+        .dropdown a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 10px 15px;
+            border-radius: 15px;
+        }
+
+        .dropdown .content {
+            display: none;
+            background-color: #fdc47aa3;
+            min-width: 100px;
+            border-radius: 15px;
+            position: fixed;
+            left: 100px;
+            top: 30px;
+        }
+
+        .dropdown:hover .content {
+            display: block;
+        }
+
+        .dropdown:hover button {
+            background-color: #fdc47a;
+        }
+
+        .dropdown a:hover {
+            background-color: #fdc47a;
+        }
+
+        /* END OF NAVIGATORS */
+
+        form {
+            font-size: 27px;
+            color: #464F72;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        #submit {
+            background-color: #899EF9; 
+            color: white;
+            font-size: 25px;
+            border: none;
+            padding: 25px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        #submit:hover {
+            background-color: #6A82E8;
+        }
+
+        #output {
+            position: relative;
+        }
+
+        .answer {
+            font-size: 27;
+        }
+
+        input[type=number] {
+            text-align: center;
+            font-size: 20px;
+            border-radius: 20px;
+            width: 198px;
+            height: 70px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            background-color: #CDD6FF;
+            border: none;
+        }
+
+        ::placeholder {
+            color: #464F72;
+        }
+
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        #table {
+            width: 30%;
+            height: 30%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .red {
+            color: #FF6252;
+            font-weight: bold;
+        }
+
+        .violet {
+            color: #6A82E8;
+            font-weight: bold;
+        }
+
+        .orange {
+            color: #F68721;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 440px) {
+            html, body {
+                margin-left: 20px;
+                margin-right: 20px;
+                background-image: none;
+                background-color: #FFFBF5;
+            }
+
+            button[type="nav bar"] {
+                width: 70px;
+                height: 70px;
+            }
+
+            .button-navigator {
+                width: 88px;
+                height: 88px;
+            }
+
+            .imgnav {
+                width: 110px;
+                height: 110px;
+            }
+
+            h1 {
+                margin-top: 100px;
+                font-size: 50px;
+            }
+
+            #table {
+                width: 80%;
+                height: auto;
+            }
+            
+            .row {
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+        }
+
+        
+
+        
+
+        </style>
+    </head>
+
+    <body>
+
+        
+        <div class = "dropdown">
+            <button type="nav bar"><img src="nav bar.png" alt="nav bar" class="navbar"></button>
+            <div class="content">
+                <a href="index.html">Start</a>
+                <a href="fundamentals.html">Home</a>
+                <a href="The Mode Start.html">The Mode</a>
+                <a href="The Mean Start.html">The Mean</a>
+            </div>
+        </div>
+
+
+        <h1>The Mode</h1>
+        <img src="shoe table.png" class="center" id="table">
+        <p>Next question, which shoe size is the most popular?</p>
+        <br>
+
+        <div class='row'>
+        <form action="">
+            <label for="answer">Answer:</label>
+            <input type="number" id="answer" name="answer" placeholder="Type a number:" required>
+            <input type="button" id="submit" value="Submit:">
+            <p class="output" id="output"></p>
+            </form>
+        </div>
+
+        <p class="hidden" id="correct"><span class="violet">Correct!</span><br>
+            37 is the size with the <span class="violet">most number of people,</span> namely 15 people, therefore the most popular shoe size is <span class="violet">37.</span></p>
+        <p class="hidden" id="incorrect"><span class="red">Incorrect!</span><br>
+            37 is the size with the <span class="violet">most number of people,</span> namely 15 people, therefore the most popular shoe size is <span class="violet">37.</span></p>
+        
+            <script>
+                const answer = document.getElementById('answer');
+                const submit = document.getElementById('submit');
+                const output = document.getElementById('output');
+                const correct = document.getElementById('correct');
+                const incorrect = document.getElementById('incorrect');
+
+            
+                const correctsf = new Audio()
+                correctsf.src = "./correct.mp3"
+                correctsf.volume = 0.2;
+
+                const wrongsf = new Audio()
+                wrongsf.src = "./incorrect.mp3"
+                wrongsf.volume = 0.2;
+
+                const errorsf = new Audio()
+                errorsf.src = "./error.mp3"
+                errorsf.volume = 0.99;
+
+            
+                function fun1() {
+                    const intanswer = parseInt(answer.value, 10);
+                    correct.classList.add('hidden');
+                    incorrect.classList.add('hidden');
+            
+                    if (intanswer === 37) {
+                        correctsf.play()
+                        correct.classList.toggle('hidden');
+                    } else {
+                        wrongsf.play()
+                        incorrect.classList.toggle('hidden');
+                    }
+                }
+            
+                submit.addEventListener('click', function(event) {
+                    if (!answer.value.trim()) {
+                        // Check if the input is empty
+                        errorsf.play()
+                        output.innerHTML = '<span class="orange">Please enter an answer!</span>';
+                        event.preventDefault(); // Prevent the form from being submitted
+                    } else {
+                        fun1(); // Process the answer
+                    }
+                });
+            </script>
+
+<br>
+<div class="button-container">
+    <button type="back" onclick = "location.href = 'value and frequency quiz.html'" class="button-navigator">
+        <img src="back nav.png" class="imgnav">
+    </button>
+
+    <button type="continue" onclick = "location.href = 'the mode introduction.html'" class="button-navigator">
+        <img src="continue nav.png" class="imgnav">
+    </button>
+</div>
+
+
+
+
+    </body>
+
+</html>

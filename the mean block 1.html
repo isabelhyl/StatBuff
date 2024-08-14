@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <title>The Mean</title>
+    <style>
+        html, body {
+            /* background-color: #FFFBF5; */
+            margin-left: 65px;
+            margin-right: 65px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            /* BACKGROUND: */
+            background-image: url("plus minus cream 2.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        button[type="continue"] {
+            background-color: #899EF9; 
+            color: white;
+            font-size: 25px;
+            border: none;
+            padding: 25px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+
+        }
+            
+        button[type="continue"]:hover {
+            background-color: #6A82E8;
+        }
+
+        button[type="back"] {
+            background-color: #5F6C9F; 
+            color: white;
+            font-size: 25px;
+            border: none;
+            padding: 25px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button[type="back"]:hover {
+            background-color: #384884;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* NAVIVATORS: */
+
+        .button-navigator {
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            border-radius: 50px;
+        }
+
+        .imgnav {
+            max-width: 100%;
+            max-height: 100%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .navbar {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        button[type="nav bar"] {
+            background-color: #fdc47aa3;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            width: 70px;
+            height: 70px;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: fixed;
+            top: 30px;
+            left: 30px;
+        }
+
+        .dropdown a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 10px 15px;
+            border-radius: 15px;
+        }
+
+        .dropdown .content {
+            display: none;
+            background-color: #fdc47aa3;
+            min-width: 100px;
+            border-radius: 15px;
+            position: fixed;
+            left: 100px;
+            top: 30px;
+        }
+
+        .dropdown:hover .content {
+            display: block;
+        }
+
+        .dropdown:hover button {
+            background-color: #fdc47a;
+        }
+
+        .dropdown a:hover {
+            background-color: #fdc47a;
+        }
+
+        /* END OF NAVIGATORS */
+
+        h1 {
+            color: #5F6C9F;
+            text-align: center;
+            font-size: 80px;
+            margin-top: 90px;
+            margin-bottom: 45px;
+            font-family: 'Lilita One', sans-serif;
+            font-weight: 100;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column-reverse; 
+            align-items: center;
+            margin: 0 20px;
+        }
+
+        button[type="block"] {
+            background-color: #AFBEFF;
+            font-size: 25px;
+            border: none;
+            width: 80px;
+            height: 40px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            cursor: grab;
+        }
+
+        p {
+            font-size: 27px;
+            text-align: center;
+            color: #464F72;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .orange {
+            color: #F68721;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 440px) {
+            html, body {
+                margin-left: 20px;
+                margin-right: 20px;
+                background-image: none;
+                background-color: #FFFBF5;
+            }
+
+            button[type="nav bar"] {
+                width: 70px;
+                height: 70px;
+            }
+
+            .button-navigator {
+                width: 88px;
+                height: 88px;
+            }
+
+            .imgnav {
+                width: 110px;
+                height: 110px;
+            }
+
+            h1 {
+                margin-top: 100px;
+                font-size: 50px;
+            }
+
+            button[type="block"] {
+                width: 60px;
+                height: 40px;
+                border-radius: 10px;
+            }
+
+            .column {
+                margin: 8px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class = "dropdown">
+        <button type="nav bar"><img src="nav bar.png" alt="nav bar" class="navbar"></button>
+        <div class="content">
+            <a href="index.html">Start</a>
+            <a href="fundamentals.html">Home</a>
+            <a href="The Mode Start.html">The Mode</a>
+            <a href="The Mean Start.html">The Mean</a>
+        </div>
+    </div>
+        
+    <h1>The Mean</h1>
+    <br>
+
+    <p>The following is some raw data regarding the exam grades of 4 students from a classroom:</p>
+    <br>
+    <p><span class="orange">7, 6, 9, 10</span></p>
+    <br>
+    <p>Let's visualize each grade or value as a stack of blocks!</p>
+    <br>
+    <br>
+
+
+    <div class="container">
+        <div id="column-1" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <button id="block-1" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-2" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-3" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-4" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-5" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-6" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-7" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <!-- <button id="block-8" type="block" draggable="true" ondragstart="drag(event)"></button> -->
+        </div>
+
+        <div id="column-2" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <button id="block-9" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-10" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-11" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-12" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-13" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-14" type="block" draggable="true" ondragstart="drag(event)"></button>
+        </div>
+
+        <div id="column-3" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <button id="block-15" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-16" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-17" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-18" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-19" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-20" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-21" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-22" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-23" type="block" draggable="true" ondragstart="drag(event)"></button>
+        </div>
+
+        <div id="column-4" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <button id="block-24" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-25" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-26" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-27" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-28" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-29" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-30" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-31" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-32" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-33" type="block" draggable="true" ondragstart="drag(event)"></button>
+        </div>
+
+        <!-- <div id="column-5" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <button id="block-34" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-35" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-36" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-37" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-38" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-39" type="block" draggable="true" ondragstart="drag(event)"></button>
+            <button id="block-40" type="block" draggable="true" ondragstart="drag(event)"></button>
+        </div> -->
+    </div>
+
+    <P>Try balancing the blocks so that each stack has the same amount of blocks!</P>
+
+    <p id="message" class="orange"></p>
+
+    <script>
+    
+    const correctsf = new Audio()
+                correctsf.src = "./correct.mp3"
+                correctsf.volume = 0.2;
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            var draggedElement = document.getElementById(data);
+            var targetColumn = event.target.closest(".column");
+            if (targetColumn) {
+                targetColumn.appendChild(draggedElement);
+                checkBalance();
+            }
+        }
+
+        function checkBalance() {
+  var columns = document.querySelectorAll('.column');
+  var blockCounts = Array.from(columns).map(column => column.childElementCount);
+  var isBalanced = blockCounts.every(count => count === blockCounts[0]);
+
+  var messageElement = document.getElementById('message');
+  if (isBalanced) {
+    messageElement.textContent = "Good job!";
+    correctsf.play();
+  } else {
+    messageElement.textContent = "";
+  }
+}
+    </script>
+
+<br>
+<div class="button-container">
+    <button type="back" onclick = "location.href = 'the mean first question.html'" class="button-navigator">
+        <img src="back nav.png" class="imgnav">
+    </button>
+
+    <button type="continue" onclick = "location.href = 'the mean block 2.html'" class="button-navigator">
+        <img src="continue nav.png" class="imgnav">
+    </button>
+</div>
+</body>
+
+</html>

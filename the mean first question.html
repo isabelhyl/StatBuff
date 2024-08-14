@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <title>The Mean</title>
+        <style>
+        
+        html, body {
+            /* background-color: #FFFBF5; */
+            margin-left: 65px;
+            margin-right: 65px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            /* BACKGROUND: */
+            background-image: url("plus minus cream 2.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        button[type="continue"] {
+            background-color: #899EF9; 
+            color: white;
+            font-size: 25px;
+            border: none;
+            padding: 25px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+
+        }
+            
+        button[type="continue"]:hover {
+            background-color: #6A82E8;
+        }
+
+        button[type="back"] {
+            background-color: #5F6C9F; 
+            color: white;
+            font-size: 25px;
+            border: none;
+            padding: 25px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button[type="back"]:hover {
+            background-color: #384884;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1 {
+            color: #5F6C9F;
+            text-align: center;
+            font-size: 70px;
+            margin-top: 90px;
+            margin-bottom: 45px;
+            font-family: 'Lilita One', sans-serif;
+            font-weight: 100;
+        }
+
+        p {
+            font-size: 27px;
+            text-align: center;
+            color: #464F72;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        /* NAVIVATORS: */
+
+        .button-navigator {
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            border-radius: 50px;
+        }
+
+        .imgnav {
+            max-width: 100%;
+            max-height: 100%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .navbar {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        button[type="nav bar"] {
+            background-color: #fdc47aa3;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            width: 70px;
+            height: 70px;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: fixed;
+            top: 30px;
+            left: 30px;
+        }
+
+        .dropdown a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 10px 15px;
+            border-radius: 15px;
+        }
+
+        .dropdown .content {
+            display: none;
+            background-color: #fdc47aa3;
+            min-width: 100px;
+            border-radius: 15px;
+            position: fixed;
+            left: 100px;
+            top: 30px;
+        }
+
+        .dropdown:hover .content {
+            display: block;
+        }
+
+        .dropdown:hover button {
+            background-color: #fdc47a;
+        }
+
+        .dropdown a:hover {
+            background-color: #fdc47a;
+        }
+
+        /* END OF NAVIGATORS */
+
+        form {
+            font-size: 27px;
+            color: #464F72;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        /* #output {
+            position: relative;
+        } */
+
+        .answer {
+            font-size: 27;
+            color: #464F72;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .rawdata {
+            color: #748DFF;
+            font-size: 35px;
+        }
+
+        #inputTable {
+            margin: 0 auto;
+            font-size: 23px;
+            border-spacing: 30px;
+            color: #464F72;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input {
+            width: 200px;
+            height: 80px;
+            font-size: 30px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #FDC47A;
+            border: none;
+            /* border-width: 5px;
+            border-color: #748DFF; */
+            color: #464F72;
+            font-weight: bold;
+
+        }
+
+        #submit {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #899EF9; 
+            color: white;
+            font-size: 25px;
+            border: none;
+            padding: 25px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+            /* margin: 0 auto; */
+        }
+
+        #submit:hover {
+            background-color: #6A82E8;
+        }
+
+        .ans {
+            color: #464F72;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+       
+        @media screen and (max-width: 440px) {
+            html, body {
+                margin-left: 20px;
+                margin-right: 20px;
+                background-image: none;
+                background-color: #FFFBF5;
+            }
+
+            button[type="nav bar"] {
+                width: 70px;
+                height: 70px;
+            }
+
+            .button-navigator {
+                width: 88px;
+                height: 88px;
+            }
+
+            .imgnav {
+                width: 110px;
+                height: 110px;
+            }
+
+            h1 {
+                margin-top: 100px;
+                font-size: 50px;
+            }
+
+            #inputTable {
+                margin: 0 auto;
+                font-size: 25px;
+                border-spacing: 30px;
+                color: #464F72;
+            }   
+
+        input {
+            width: 100px;
+            height: 60px;
+            font-size: 30px;
+            border-radius: 10px;
+        }
+            
+        }
+        
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class = "dropdown">
+            <button type="nav bar"><img src="nav bar.png" alt="nav bar" class="navbar"></button>
+            <div class="content">
+                <a href="index.html">Start</a>
+                <a href="fundamentals.html">Home</a>
+                <a href="The Mode Start.html">The Mode</a>
+                <a href="The Mean Start.html">The Mean</a>
+            </div>
+        </div>
+
+
+        <h1>Let's refresh some basics!</h1>
+        <br>
+
+        <p>The following is a piece of raw data regarding the number of pets a certain group of people own:</p>
+        
+        <p><span class="rawdata"><b>2, 1, 4, 2, 3, 4, 4, 1, 1, 1, 3, 1, 3, 3, 1</b></span></p>
+
+        <p>Group together the number of pets and the number of people who own those amounts of pets in the table above!</p>
+        <br>
+
+        <table id="inputTable">
+            <thead>
+                <tr>
+                    <th>Number of Pets</th>
+                    <th>Number of People</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" id="cell_1_1" readonly value="1"></td>
+                    <td><input type="number" id="cell_1_2" required></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="cell_2_1" readonly value="2"></td>
+                    <td><input type="number" id="cell_2_2" required></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="cell_3_1" readonly value="3"></td>
+                    <td><input type="number" id="cell_3_2" required></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="cell_4_1" readonly value="4"></td>
+                    <td><input type="number" id="cell_4_2" required></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br>
+        <button onclick="checkAnswers()" id="submit">Submit</button>
+
+        <p class="reminder" id="reminder"></p>
+    
+        <script>
+        
+
+                const errorsf = new Audio()
+                errorsf.src = "./error.mp3"
+                errorsf.volume = 0.99;
+                
+            function checkAnswers() {
+                const correctAnswers = {
+                    cell_1_2: 6,
+                    cell_2_2: 2,
+                    cell_3_2: 4,
+                    cell_4_2: 3,
+                };
+        
+                let allFieldsFilled = true;
+        
+                for (const cellId in correctAnswers) {
+                    const userAnswer = document.getElementById(cellId).value.trim();
+                    const reminder = document.getElementById('reminder');
+        
+                    if (!userAnswer) {
+                        // If any required field is empty, set the flag to false
+                        allFieldsFilled = false;
+                        break;
+                    }
+                }
+        
+                if (!allFieldsFilled) {
+                    errorsf.play()
+                    reminder.innerHTML = 'Please fill in all the answers!';
+                    return; // Exit the function if any field is empty
+                }
+        
+                // Continue processing the answers
+                for (const cellId in correctAnswers) {
+                    const userAnswer = parseInt(document.getElementById(cellId).value, 10);
+                    const correctAnswer = correctAnswers[cellId];
+                    const outputElement = document.createElement('div');
+    
+        
+                    outputElement.className = 'output';
+        
+                    if (userAnswer === correctAnswer) {
+                        outputElement.innerHTML = '<span class="ans">Correct!</span>';
+                    } else {
+                        outputElement.innerHTML = `<span class="ans">Incorrect!<br>Correct answer: ${correctAnswer} </span>`;
+                    }
+        
+                    document.getElementById(cellId).parentNode.appendChild(outputElement);
+                }
+            }
+
+        </script>
+
+<br>
+<div class="button-container">
+    <button type="back" onclick = "location.href = 'The Mean Start.html'" class="button-navigator">
+        <img src="back nav.png" class="imgnav">
+    </button>
+
+    <button type="continue" onclick = "location.href = 'the mean block 1.html'" class="button-navigator">
+        <img src="continue nav.png" class="imgnav">
+    </button>
+</div>
+
+    </body>
+
+</html>
